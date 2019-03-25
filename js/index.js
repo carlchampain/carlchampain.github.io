@@ -58,7 +58,14 @@ function clickOnContact() {
         nodeDOM.remove(); 
         var LinkedInLinkText = "This is my ";
         makeElement("p", { className: "title" }, LinkedInLinkText);
-        makeChildElem("a", { href: "https://linkedin.com/in/carl-champain-2901aa9a/"}, "LinkedIn profile");     
+        makeChildElem(
+            "a", 
+            { 
+                href: "https://linkedin.com/in/carl-champain-2901aa9a/",
+                target: "_blank"
+            }, 
+            "LinkedIn profile"
+        );     
         var contactTextTitle = "Contact";
         makeElement("h1", { className: "title" }, contactTextTitle);
     } 
