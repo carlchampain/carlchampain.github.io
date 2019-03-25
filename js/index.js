@@ -46,6 +46,7 @@ function clickedOnIcon() {
 }
 
 function clickOnContact() { 
+    window.location = "#Contact";
     var nodeDOM = document.getElementsByClassName('title')[0];
     // if (nodeDOM === undefined) {
     //     var contactTextTitle = "Contact";
@@ -73,6 +74,7 @@ function clickOnContact() {
 }
 
 function clickOnProjects() {
+    window.location = "#Projects";
     var nodeDOM =  document.getElementsByClassName('title')[0];  
     // if (nodeDOM === undefined) {
     //     var projTextTitle = "Projects";
@@ -89,10 +91,10 @@ function clickOnProjects() {
     }  
     clickedOnIcon();
 }
-function homePage() {
+function onLoadCreateHome() {
+    window.location = "#Home";
     var homeTextTitle = "Hi, I'm Carl from planet Earth.";
-    makeElement("p", { className: "title" }, "I'm test #2");
-    makeElement("p", { className: "title" }, "I'm just lil'test bro mate...");
+    makeElement("p", { className: "title" }, "I'm a full stack web developer.");
     makeElement("h1", { className: "title" }, homeTextTitle);
 }
 
@@ -103,11 +105,7 @@ function clickOnHome() {
             nodeDOM.nextSibling.remove(); 
         }
         nodeDOM.remove();
-        homePage();
+        onLoadCreateHome();
     }  
     clickedOnIcon();
-}
-
-function onLoadCreateHome() {
-    homePage();
 }
