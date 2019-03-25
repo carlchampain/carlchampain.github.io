@@ -32,7 +32,7 @@ function makeChildElem(type, props, text) {
         newDiv[prop] = props[prop];
        });
     var newContent = document.createTextNode(text); 
-    newDiv.appendChild(newContent);
+    newDiv.appendChild(newContent);  
     document.getElementsByClassName('title')[0].appendChild(newDiv); 
 } 
 
@@ -93,8 +93,10 @@ function clickOnProjects() {
 }
 function onLoadCreateHome() {
     window.location = "#Home";
-    var homeTextTitle = "Hi, I'm Carl from planet Earth.";
-    makeElement("p", { className: "title" }, "I'm a full stack web developer.");
+    var homeTextTitle = "Hi, I am Carl from planet Earth.";
+    makeElement("img", { id: "moi", src: "./moi.png" }, "");
+    makeElement("h4", { className: "title" }, "This is a single page app built with plain javascript and css.");
+    makeElement("h4", { className: "title" }, "I am a full stack web developer.");
     makeElement("h1", { className: "title" }, homeTextTitle);
 }
 
