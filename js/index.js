@@ -99,8 +99,10 @@ function clickOnProjects() {
         } 
         nodeDOM.remove();
         var projTextTitle = "- Projects -";
-        var safarifyText = "This is my web app ";
-        makeElement("p", { className: "title", id: "safarify" }, safarifyText);
+        makeElement("p", { className: "title", id: "safarify" }, "");
+        makeChildElem("img", { id: "safarifylogo", src: "./bear.png" }, "");
+        var div = document.getElementById('safarify');
+        div.innerHTML += "This is my web app ";
         makeChildElem(
             "a", 
             { 
@@ -109,7 +111,6 @@ function clickOnProjects() {
             }, 
             "Safarify"
         );
-        var div = document.getElementById('safarify');
         div.innerHTML += '. Built with Node.js, React and Firebase DB, check it out on a mobile browser for best experience!';
         makeElement("h1", { className: "title" }, projTextTitle);
     }  
@@ -118,10 +119,10 @@ function clickOnProjects() {
 function onLoadCreateHome() {
     window.location = "#Home";
     var homeTextTitle = "Hi, I am Carl from planet Earth.";
-    makeElement("img", { id: "moi", src: "./moi.png" }, "");
+    makeElement("img", { className: "imgHome", id: "moi", src: "./moi.png" }, "");
     makeElement("h4", { className: "title" }, "This is a single page app built with plain javascript and css.");
     makeElement("h4", { className: "title" }, "I am a full stack web developer living in Brooklyn, NY.");
-    makeElement("img", { id: "sunglasses", src: "./sunglasses.png" }, "");
+    makeElement("img", { className: "imgHome", id: "sunglasses", src: "./sunglasses.png" }, "");
     makeElement("h1", { className: "title" }, homeTextTitle);
 }
 
