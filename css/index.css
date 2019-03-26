@@ -77,7 +77,7 @@ margin-right: auto;
 
 .imgHome {
 opacity: 0;
-transition: opacity 0.3s ease;
+transition: opacity 0.2s ease;
 }
 
 .loaded {
@@ -87,6 +87,15 @@ opacity: 1;
 #safarifylogo {
     max-width: 70px;
     float: left;
+}
+
+#yolo {
+    position: relative;
+    float: right;
+}
+#yolo:hover {
+    background-color: #333;
+    color: #f2f2f2;
 }
 
 @media only screen and (min-width: 600px) {
