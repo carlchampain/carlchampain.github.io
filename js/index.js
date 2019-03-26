@@ -13,12 +13,6 @@ window.addEventListener('load', function eventHandler() {
         }
     }  
         onLoadCreateHome();
-        document.getElementsByTagName("img")[0].onload = function() {
-            handleLoadImg();
-        };
-        document.getElementsByTagName("img")[1].onload = function() {
-            handleLoadImg();
-        };
     }, false
     );
 
@@ -44,8 +38,18 @@ function makeChildElem(type, props, text) {
 
 function handleLoadImg() {
     var imgTag = document.getElementsByTagName("img");
-    imgTag[0].classList.add('loaded');
-    imgTag[1].classList.add('loaded');
+    for (var i = 0; i < imgTag.length; i++) {
+        imgTag[i].classList.add('loaded');
+    }
+}
+
+function loadForHomeImg() {
+    var imageHome = document.getElementsByTagName("img");
+    for (var i = 0; i < imageHome.length; i++) {
+        imageHome[i].onload = function() {
+            handleLoadImg();
+        };
+    };
 }
 
 function clickedOnIcon() {
@@ -100,7 +104,7 @@ function clickOnProjects() {
         nodeDOM.remove();
         var projTextTitle = "- Projects -";
         makeElement("p", { className: "title", id: "safarify" }, "");
-        makeChildElem("img", { id: "safarifylogo", src: "./bear.png" }, "");
+        makeChildElem("img", { id: "safarifylogo", className: "imgHome", src: "./bear.png" }, "");
         var div = document.getElementById('safarify');
         div.innerHTML += "This is my web app ";
         makeChildElem(
@@ -113,6 +117,7 @@ function clickOnProjects() {
         );
         div.innerHTML += '. Built with Node.js, React and Firebase DB, check it out on a mobile browser for best experience!';
         makeElement("h1", { className: "title" }, projTextTitle);
+        loadForHomeImg();
     }  
     clickedOnIcon();
 }
@@ -124,7 +129,9 @@ function onLoadCreateHome() {
     makeElement("h4", { className: "title" }, "I am a full stack web developer living in Brooklyn, NY.");
     makeElement("img", { className: "imgHome", id: "sunglasses", src: "./sunglasses.png" }, "");
     makeElement("h1", { className: "title" }, homeTextTitle);
+    loadForHomeImg();
 }
+
 
 function clickOnHome() {
     var nodeDOM =  document.getElementsByClassName('title')[0]; 
@@ -134,7 +141,7 @@ function clickOnHome() {
         }
         nodeDOM.remove();
         onLoadCreateHome();
-        handleLoadImg();
+        loadForHomeImg();
     }  
     clickedOnIcon();
 }
