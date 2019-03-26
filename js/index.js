@@ -13,6 +13,12 @@ window.addEventListener('load', function eventHandler() {
         }
     }  
         onLoadCreateHome();
+        document.getElementsByTagName("img")[0].onload = function() {
+            handleLoadImg();
+        };
+        document.getElementsByTagName("img")[1].onload = function() {
+            handleLoadImg();
+        };
     }, false
     );
 
@@ -35,6 +41,12 @@ function makeChildElem(type, props, text) {
     newDiv.appendChild(newContent);  
     document.getElementsByClassName('title')[0].appendChild(newDiv); 
 } 
+
+function handleLoadImg() {
+    var imgTag = document.getElementsByTagName("img");
+    imgTag[0].classList.add('loaded');
+    imgTag[1].classList.add('loaded');
+}
 
 function clickedOnIcon() {
     var x = document.getElementById("myTopnav");
@@ -98,7 +110,7 @@ function clickOnProjects() {
             "Safarify"
         );
         var div = document.getElementById('safarify');
-        div.innerHTML += '. Built with Node.js, React and Firebase DB, check it out on a mobile browser best experience!';
+        div.innerHTML += '. Built with Node.js, React and Firebase DB, check it out on a mobile browser for best experience!';
         makeElement("h1", { className: "title" }, projTextTitle);
     }  
     clickedOnIcon();
@@ -121,6 +133,7 @@ function clickOnHome() {
         }
         nodeDOM.remove();
         onLoadCreateHome();
+        handleLoadImg();
     }  
     clickedOnIcon();
 }
