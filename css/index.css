@@ -28,7 +28,6 @@ body {
   }
   
   .active {
-    /* background-color: #4CAF50; */
     color: white;
   }
   
@@ -36,19 +35,12 @@ body {
     display: none;
   }
   
-  /* @media screen and (max-width: 600px) { */
     .topnav div:not(:first-child) {display: none;}
     .topnav div.icon {
       float: left;
       display: block;
     }
-  /* } */
-/*   
-  @media screen and (max-width: 600px) {
-    
-   
-   
-  } */
+ 
   .topnav.responsive {position: relative;}
   .topnav.responsive div {
     float: none;
@@ -71,4 +63,11 @@ body {
     margin-right: auto;
     max-width: 100%;
     border:1px solid #021a40;
+  }
+  
+  #sunglasses {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 15%;
   }
