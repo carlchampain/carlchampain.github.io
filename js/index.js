@@ -141,7 +141,6 @@ function clickOnHome() {
         }
         nodeDOM.remove();
         onLoadCreateHome();
-        loadForHomeImg();
     }  
     clickedOnIcon();
 }
