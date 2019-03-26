@@ -92,9 +92,8 @@ opacity: 1;
 #yolo {
     position: relative;
     float: right;
-    image-orientation: from-image;
     max-width: 12%; 
-    margin-top: 8px;
+    margin-top: 8px; 
 }
 #yolo:hover {
     background-color: #333;

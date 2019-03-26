@@ -127,7 +127,6 @@ function onLoadCreateHome() {
     makeElement("img", { className: "imgHome", id: "moi", src: "./moi.png" }, "");
     makeElement("h4", { className: "title" }, "This is a single page app built with plain javascript and css.");
     makeElement("h4", { className: "title" }, "I am a full stack web developer living in Brooklyn, NY.");
-    // makeElement("img", { className: "imgHome", id: "sunglasses", src: "./sunglasses.png" }, "");
     makeElement("h1", { className: "title" }, homeTextTitle);
     loadForHomeImg();
 }
