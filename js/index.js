@@ -54,21 +54,17 @@ function loadForHomeImg() {
 }
 
 function clickedOnIcon() {
-    // var x = document.getElementById("myTopnav");
-    // if (x.className === "topnav") {
-    //   x.className += " responsive";
-    // } else {
-    //   x.className = "topnav";
-    // }
     var menu = document.getElementsByClassName("sidenav")[0];
     menu.className += " open-sidenav";
-    document.getElementById("myTopnav").style.opacity = 0.9;
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("myTopnav").style.opacity = 0.4;
 }
 
 function clickedCloseBtn() {
     var menu = document.getElementsByClassName("sidenav")[0];
     menu.className = "sidenav";
     document.getElementById("myTopnav").style.opacity = 1;
+    document.body.style.backgroundColor = "#ededed";
 }
 
 function clickOnContact() { 
